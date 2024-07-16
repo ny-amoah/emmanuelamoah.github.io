@@ -1,0 +1,242 @@
+#menu{
+    position: fixed;
+    width: 270px;
+    background-color: var(--main-dark);
+    height: 100vh;
+    text-align: center;
+    color: white;
+    z-index: 1000;
+}
+
+#menu-open{
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-open div{
+    position: relative;
+    width: 18px;
+    margin: auto;
+    top: 50%;
+    margin-top: -7px;
+}
+
+#menu-open span{
+    position: relative;
+    display: block;
+    height: 2px;
+    width: 18px;
+    background-color: white;
+    margin-bottom: 4px;
+    border-radius: 10px;
+}
+
+#menu-open span:last-child{
+    margin-bottom: 0px;
+}
+
+#main-menu{
+    height: 90%;
+    overflow-y: auto;
+}
+
+#menu-header #profile-pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+#menu-header h1{
+    font-size: 23px;
+}
+
+#social-nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(33,36,49);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 50% 50%;
+    transition: 0.3s;
+    background-size: 20px;
+}
+
+#social-nav a:nth-child(1){
+    background-image: url(../boxicons/whatsapp-logo-240.png);
+}
+
+#social-nav a:nth-child(2){
+    background-image: url(../boxicons/twitter-logo-240.png);
+}
+
+#social-nav a:nth-child(3){
+    background-image: url(../boxicons/instagram-logo-240.png);
+}
+
+#social-nav a:nth-child(4){
+    background-image: url(../boxicons/linkedin-logo-240.png);
+}
+
+#social-nav a:nth-child(5){
+    background-image: url(../boxicons/telegram-logo-240.png);
+}
+
+#menu #social-nav a:hover{
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+#menu #social-nav a:first-child{
+    margin-left: 0;
+}
+
+#menu-links{
+    margin-top: 26px;
+}
+
+#menu-links a{
+    display: block;
+    text-decoration: none;
+    color: var(--menu-unselected);
+    padding: 16px 0px;
+    text-align: left;
+    padding-left: 60px;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-size: 23px;
+    background-position: 23px 50%; 
+    transition: 0.3s;
+}
+
+#menu-links a:hover{
+    color: white;
+    transition: 0.3s;
+}
+
+#menu-links a:nth-child(1):hover{
+    background-image: url(../boxicons/menu-current-1.png) !important;
+}
+
+#menu-links a:nth-child(2):hover{
+    background-image: url(../boxicons/menu-current-2.png) !important;
+}
+
+#menu-links a:nth-child(3):hover{
+    background-image: url(../boxicons/menu-current-3.png) !important;
+}
+
+#menu-links a:nth-child(4):hover{
+    background-image: url(../boxicons/menu-current-4.png) !important;
+}
+
+#menu-links a:nth-child(5):hover{
+    background-image: url(../boxicons/menu-current-5.png) !important;
+}
+
+#menu-links a:nth-child(6):hover{
+    background-image: url(../boxicons/menu-current-6.png) !important;
+}
+
+#copyright{
+    position: absolute;
+    bottom: 10px;
+    font-size: 15px;
+    left: 50%;
+    width: 100%;
+    margin-left: -50%;
+}
+
+@media screen and (max-width: 1074px) {
+    #menu{
+        left: -270px;
+    }
+
+    #menu-open{
+        display: inline-block;
+    }
+
+    .slide-out{
+        animation: slide-out 0.5s forwards ease 1;
+    }
+
+    .slide-in{
+        animation: slide-in 0.5s forwards ease 1;
+    }
+
+    .down{
+        animation: down 0.5s 1 0s both ease;
+    }
+
+    .up{
+        animation: up 0.5s 1 0s both ease;
+    }
+
+    .fade-out{
+        animation: fadeOut 0.5s 1 0s both ease;
+    }
+
+    .down-reverse{
+        animation: downReverse 0.5s 1 0s both ease;
+    }
+
+    .up-reverse{
+        animation: upReverse 0.5s 1 0s both ease;
+    }
+
+    .fade-out-reverse{
+        animation: fadeOutReverse 0.5s 1 0s both ease;
+    }
+
+    @keyframes slide-out {
+        from{left: -270px;}
+        to{left: 0px;}
+    }
+
+    @keyframes slide-in {
+        from{left: 0px;}
+        to{left: -270x;}
+    }
+
+    @keyframes down {
+        from{top: 0px;transform: rotate(0deg);}
+        to{top: 6px;transform: rotate(45deg);}
+    }
+
+    @keyframes downReverse {
+        from{top: 6px;transform: rotate(45deg);}
+        to{top: 0px;transform: rotate(0deg);}
+    }
+
+    @keyframes up {
+        from{bottom: 0px;transform: rotate(0deg);}
+        to{bottom: 6px;transform: rotate(-45deg);}
+    }
+
+    @keyframes upReverse {
+        from{bottom: 6px;transform: rotate(-45deg);}
+        to{bottom: 0px;transform: rotate(0deg);}
+    }
+
+    @keyframes fadeOut {
+        from{opacity: 1;}
+        to{opacity: 0;}
+    }
+
+    @keyframes fadeOutReverse {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+}

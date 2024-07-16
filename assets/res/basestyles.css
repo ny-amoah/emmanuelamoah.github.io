@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/Quicksand.ttf);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway.ttf);
+}
+
+:root{
+    --main-color: rgb(20,157,221);
+    --main-dark: rgb(4,11,20);
+    --heading-color: rgb(23,59,108);
+    --bg: rgb(245,248,253);
+    --bg-deep: rgb(228,237,249);
+    --border-color: rgb(31,82,151);
+    --menu-unselected: rgb(204,204,204);
+    --menu-selected: white;
+}
+
+*{
+    font-family: "Open Sans";
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+#content{
+    margin-left: 270px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+textarea, input.text, input[type="text"], input[type="button"], input[type="submit"], .input-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+} 
+
+#to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-image: url(../boxicons/up-arrow-alt-regular-240.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 50% 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#to-top:hover{
+    bottom: 25px;
+    transition: 0.3s;
+}
+
+.animate{
+    opacity: 0;
+    margin-top: 7%;
+}
+
+

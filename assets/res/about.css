@@ -1,0 +1,87 @@
+#about{
+    padding: 0px 30px;
+    padding-top: 25px;
+    color: #333;
+}
+
+#about p{
+    text-align: justify;
+}
+
+#about h1{
+    color: var(--heading-color);
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#about hr{
+    display: inline-block;
+    width: 50px;
+    border: 1px solid var(--main-color);
+}
+
+#about-description{
+    padding-left: 350px;
+    background-image: url(../about-pic.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 300px;
+}
+
+#about-description img{
+    display: none;
+}
+
+#about-description h2{
+    color: var(--heading-color);
+}
+
+#about-description ul{
+    padding-left: 0px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    list-style-type: none;
+}
+
+#about-description ul li{
+    padding: 12px;
+    padding-left: 20px;
+    background-image: url(../right-chevron.png);
+    background-repeat: no-repeat;
+    background-position: 0px 50%;
+    background-size: 10px;
+}
+
+#about-description ul li a{
+    color: #333;
+}
+
+@media screen and (max-width: 1200px){
+    #about-description ul{
+        grid-template-columns: 95%;
+    }
+}
+
+@media screen and (max-width: 1074px){
+    #about-description ul{
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 921px){
+    #about-description ul{
+        grid-template-columns: 95%;
+    }
+}
+
+@media screen and (max-width: 746px){
+    #about-description{
+        background-image: none;
+        padding-left: 0;
+    }
+
+    #about-description img{
+        display: inline-block;
+        width: 100%;
+    }
+}

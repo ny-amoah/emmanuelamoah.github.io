@@ -1,0 +1,90 @@
+#resume{
+    padding: 25px 30px 40px;
+}
+
+#resume-text h1{
+    margin-top: 0px;
+    text-align: left;
+    color: var(--heading-color);
+}
+
+#resume hr{
+    width: 50px;
+    margin: auto;
+    border: 1px solid var(--main-color); 
+    display: inline-block;
+}
+
+#resume-main-grid{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 0px 20px;
+    justify-content: center;
+    color: rgba(0,0,0,0.8);
+    line-height: 27px;
+}
+
+#resume-main-grid h1{
+    font-size: 25px;
+    color: var(--heading-color);
+}
+
+#resume-main-grid h2{
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: black;
+}
+
+#resume-main-grid ul{
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+#resume-main-grid li{
+    padding-left: 20px;
+    background-image: url(../right-chevron.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 0px 8px;
+}
+
+#inner-summary, #inner-education, #inner-professional-xp{
+    position: relative;
+    border-left: 2px solid var(--border-color);
+    padding-left: 20px;
+}
+
+#inner-professional-xp > div, #inner-education > div{
+    position: relative;
+}
+
+#inner-summary::before, #inner-professional-xp > div::before, #inner-education > div::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    left: -11px;
+    top: 0;
+}
+
+#inner-professional-xp > div::before, #inner-education > div::before{
+    left: -31px;
+}
+
+.year{
+    display: inline-block;
+    background-color: var(--bg-deep);
+    padding: 4px 21px;
+    margin-bottom: 10px;
+    font-family: "Raleway";
+}
+
+@media screen and (max-width: 836px){
+    #resume-main-grid{
+        grid-template-columns: 100%;
+    }
+}

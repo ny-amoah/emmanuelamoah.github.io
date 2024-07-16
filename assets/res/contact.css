@@ -1,0 +1,183 @@
+#contact{
+    padding: 25px 30px 40px;
+}
+
+#contact-text h1{
+    margin-top: 0px;
+    text-align: left;
+    color: var(--heading-color);
+}
+
+#contact hr{
+    width: 50px;
+    margin: auto;
+    border: 1px solid var(--main-color); 
+    display: inline-block;
+}
+
+#contact-grid{
+    display: grid;
+    grid-template-columns: 42% 54%;
+    gap: 20px 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#contact-grid > div{
+    box-shadow: 1px 1px 10px 1px #aaa;
+}
+
+#contact-info, #contact-inputs{
+    padding: 30px;
+}
+
+#contact-info > div{
+    position: relative;
+    padding-left: 65px;
+}
+
+#contact-info > div::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--bg-deep);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 50% 50%;
+}
+
+#contact-info > div:nth-child(1)::before{
+    background-image: url(../boxicons/map-regular-240.png);
+}
+
+#contact-info > div:nth-child(2)::before{
+    background-image: url(../boxicons/envelope-regular-240.png);
+}
+
+#contact-info > div:nth-child(3)::before{
+    background-image: url(../boxicons/menu-current-6.png);
+}
+
+.numbers{
+    color: black;
+}
+
+#map{
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    background-color: #aaa;
+}
+
+#contact-info div:nth-child(1) h2{
+    margin-top: 0px;
+}
+
+#contact-info h2{
+    margin-bottom: 6px;
+}
+
+#contact-info span{
+    color: rgba(0,0,0,0.8);
+    font-size: 15px;
+}
+
+#contact-inputs form{
+    margin-bottom: 0px;
+}
+
+#contact-inputs form div:nth-child(1){
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 20px 6%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#contact-inputs form div:nth-child(2){
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px 20px;
+    justify-content: center;
+}
+
+#contact-inputs label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+#name-input, #email, #subject, #message{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+    padding: 9px 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#name-input:focus, #email:focus, #subject:focus, #message:focus{
+    border: 1px solid var(--main-color);
+    transition: 0.3s;
+}
+
+#message{
+    height: 295px !important;
+    resize: none;
+    font-size: 14px;
+}
+
+#submit{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 13px 25px;
+    background-color: var(--main-color);
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1250px){
+    #contact-inputs form div:nth-child(1){
+        grid-template-columns: 100%;
+    }
+
+    #message{
+        height: 200px !important;
+    }
+}
+
+@media screen and (max-width: 976px){
+    #contact-grid{
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 686px){
+    #contact-inputs form div:nth-child(1){
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 367px){
+    #contact-info > div{
+        padding-left: 0px;
+    }
+
+    #contact-info > div::before{
+        display: none;
+    }
+}
+
